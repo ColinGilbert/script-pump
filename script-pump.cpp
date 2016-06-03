@@ -9,7 +9,7 @@
 
 struct handler_functor
 {
-	void operator()(const ENetPacket* p)
+	void operator()(const std::string& s)
 	{
 		// No-op :)
 	}
@@ -39,6 +39,7 @@ int main(int argc, char* argv[])
 
 	while (true)
 	{
+		network.tick();
 		//{
 		//	fmt::MemoryWriter ww;
 		//	ww << "[ScriptPump] Attempting to load " << init.generic_string();
